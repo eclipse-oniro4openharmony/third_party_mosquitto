@@ -21,7 +21,9 @@ Contributors:
 #ifndef WITH_EPOLL
 
 #ifndef WIN32
+#ifndef _GNU_SOURCE
 #  define _GNU_SOURCE
+#endif
 #endif
 
 #include <assert.h>

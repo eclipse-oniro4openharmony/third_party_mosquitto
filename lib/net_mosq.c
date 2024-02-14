@@ -16,7 +16,9 @@ Contributors:
    Roger Light - initial implementation and documentation.
 */
 
-#define _GNU_SOURCE
+#ifndef _GNU_SOURCE
+#  define _GNU_SOURCE
+#endif
 #include "config.h"
 
 #include <assert.h>
@@ -25,7 +27,9 @@ Contributors:
 #include <stdio.h>
 #include <string.h>
 #ifndef WIN32
-#define _GNU_SOURCE
+#ifndef _GNU_SOURCE
+#  define _GNU_SOURCE
+#endif
 #include <netdb.h>
 #include <netinet/tcp.h>
 #include <sys/socket.h>
