@@ -1701,7 +1701,7 @@ static int config__read_file_core(struct mosquitto__config *config, bool reload,
 					ssize_t lim;
 					if(conf__parse_ssize_t(&token, "memory_limit", &lim, saveptr)) return MOSQ_ERR_INVAL;
 					if(lim < 0){
-						log__printf(NULL, MOSQ_LOG_ERR, "Error: Invalid memory_limit value (%ld).", lim);
+						log__printf(NULL, MOSQ_LOG_ERR, "Error: Invalid memory_limit value (%zd).", lim);
 						return MOSQ_ERR_INVAL;
 					}
 					memory__set_limit((size_t)lim);
