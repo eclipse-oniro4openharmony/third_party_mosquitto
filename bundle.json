@@ -27,7 +27,8 @@
         },
         "build": {
             "sub_component": [
-                "//third_party/mosquitto:mosquitto.conf",
+                "//third_party/mosquitto/buildohos:mosquitto.conf",
+                "//third_party/mosquitto/buildohos:mosquitto_init",
                 "//third_party/mosquitto/src:mosquitto"
             ],
             "inner_kits": [],

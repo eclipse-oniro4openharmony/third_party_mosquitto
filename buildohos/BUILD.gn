@@ -20,3 +20,10 @@ ohos_prebuilt_etc("mosquitto.conf") {
     source = "mosquitto.conf"
     relative_install_dir = "mosquitto"
 }
+
+ohos_prebuilt_etc("mosquitto_init") {
+  source = "etc/init/mosquitto.cfg"
+  relative_install_dir = "init"
+  part_name = "mosquitto"
+  subsystem_name = "thirdparty"
+}
