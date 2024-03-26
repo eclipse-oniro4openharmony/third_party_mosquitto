@@ -1,0 +1,37 @@
+{
+    "name": "@ohos/mosquitto",
+    "description": "mosquitto",
+    "version": "1.0",
+    "license": "epl-v20",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "third_party/mosquitto"
+    },
+    "dirs": {},
+    "scripts": {},
+    "licensePath": "LICENSE.txt",
+    "readmePath": {
+        "en": "README.md"
+    },
+    "component": {
+        "name": "mosquitto",
+        "subsystem": "thirdparty",
+        "syscap": [],
+        "features": [],
+        "adapted_system_type": [],
+        "rom": "",
+        "ram": "",
+        "deps": {
+            "components": [],
+            "third_party": ["cJSON"]
+        },
+        "build": {
+            "sub_component": [
+                "//third_party/mosquitto:mosquitto.conf",
+                "//third_party/mosquitto/src:mosquitto"
+            ],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}
